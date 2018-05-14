@@ -1,25 +1,25 @@
 pipeline {
     agent any
 	
-	tools{
+	tools {
 		maven 'maven'
 		jdk 'jdk8'
 	}
     stages {
-		stage('initialize'){
-			steps{
+		stage ('Initialize') {
+			steps {
 				sh '''
 					echo "PATH = ${PATH}"
 					echo "M2_HOME = ${M2_HOME}"
 				'''
 			}
 		}
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-		stage('test') {
+		stage('Test') {
 			steps {
 				sh 'mvn test'
 			}
