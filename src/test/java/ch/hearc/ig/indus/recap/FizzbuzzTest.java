@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package ch.hearc.ig.indus.recap;
 
 import ch.hegarc.ig.ido.fizzbuzztdd.Fizzbuzz;
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class FizzbuzzTest {
         ArrayList maListe = new ArrayList();
         maListe = fb.getListe();
         for(int i = 1; i < 100; i++){
-            assertEquals("Le nombre suit la sÃ©quence", i, maListe.get(i-1));
+            assertEquals("Le nombre suit la séquence", i, maListe.get(i-1));
         }
     }
     
